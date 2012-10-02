@@ -25,7 +25,7 @@ Inspired by the original App for iPhone/Android.
 
 ## Prototype Screenshot
 
-![Prototype](tiefenb.github.com/ardrone-webcontroller/screenshoot.jpg)
+![Prototype](ardrone-webcontroller/screenshoot.jpg)
 
 ## Warning: This project is in early development and experimental - Usage on your own risk!
 
