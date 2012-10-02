@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<!-- http://www.gamepadjs.com/#browser-support -> http://raphaeljs.com/picker.html -->
+	<head>
+		<title>Drone Controler</title>
+		<style type="text/css">
+			* {
+				margin:0;
+				padding:0;
+				outline:none;
+			}
+			#box {
+				width:200px;
+				height:200px;
+				border:1px solid black;
+				border-radius:100px;
+			}
+			#joystick {
+				width:18px;
+				height:18px;
+				border:1px solid black;
+				border-radius:10px;
+				position:relative;
+				top:94px;
+				left:94px;
+			}
+		</style>
+		<script src="http://localhost:4000/socket.io/socket.io.js"></script>
+		<script type="text/javascript" src="scripts/jquery.js"></script>
+		<script type="text/javascript" src="scripts/jquery-ui.js"></script>
+		<script type="text/javascript" src="scripts/general.js"></script>
+	</head>
+	<body>
+		<div id="box">
+			<div id="joystick"></div>
+		</div>
+		<br/><br/>
+		<hr/>
+		<br/><br/>
+		<a href="javascript:socket.emit('takeoff', {});">takeoff</a><br/><br/>
+		<a href="javascript:socket.emit('land', {});">land</a><br/><br/>
+		<a href="javascript:socket.emit('recover', {});">recover from emergency mode</a>
+	</body>
+</html>
