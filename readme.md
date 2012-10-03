@@ -1,14 +1,13 @@
 # AR Drone Webcontroller
 
 This is a browser based controller for the [Parrot AR Drone 2.0](http://ardrone2.parrot.com/), using [NodeJS](http://nodejs.org/), [node-ar-drone](https://github.com/felixge/node-ar-drone), [socket.io](https://github.com/LearnBoost/socket.io) and the draggable() feature from [jQuery UI](https://github.com/jquery/jquery-ui).
-Inspired by the original App for iPhone/Android.
 
 ## Usage
 
-1. Connect to your drone's wifi.
-2. $ node drone.js
-3. open the index.html, click takeoff
-4. navigate with the circle joytick
+1. Connect to your drone's wifi
+2. $ node drone-controller/drone.js
+3. open the index.html, click on takeoff
+4. navigate with the circle joystick
 
 ## Current features
 
@@ -23,11 +22,11 @@ Inspired by the original App for iPhone/Android.
 * turning clockwise / counter clockwise
 * moving up/down
 
-## Prototype Screenshot
+## Prototype Screenshoots
 
 ![Prototype](https://raw.github.com/tiefenb/ardrone-webcontroller/master/screenshoot.jpg)
 
-## Warning: This project is in early development and experimental - Usage on your own risk!
+## Warning: This project is in early development and experimental
 
 ## License (MIT)
 
