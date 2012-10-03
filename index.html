@@ -14,6 +14,8 @@
 				height:200px;
 				border:1px solid black;
 				border-radius:100px;
+				margin:50px 0 0 50px;
+				position:relative;
 			}
 			#joystick {
 				width:18px;
@@ -24,6 +26,55 @@
 				top:94px;
 				left:94px;
 			}
+			
+			.arrow-up {
+				width: 0; 
+				height: 0; 
+				border-left: 20px solid transparent;
+				border-right: 20px solid transparent;
+				border-bottom: 20px solid black;
+				position:absolute;
+				top:-20px;
+				left:50%;
+				margin-left:-20px;
+			}
+
+			.arrow-down {
+				width: 0; 
+				height: 0; 
+				border-left:20px solid transparent;
+				border-right: 20px solid transparent;
+				border-top: 20px solid black;
+				position:absolute;
+				bottom:-20px;
+				left:50%;
+				margin-left:-20px;
+			}
+
+			.arrow-right {
+				width: 0; 
+				height: 0; 
+				border-top: 20px solid transparent;
+				border-bottom: 20px solid transparent;
+				border-left: 20px solid black;
+				position:absolute;
+				right:-20px;
+				top:50%;
+				margin-top:-20px;
+			}
+
+			.arrow-left {
+				width: 0; 
+				height: 0; 
+				border-top: 20px solid transparent;
+				border-bottom: 20px solid transparent; 
+				border-right:20px solid black;
+				position:absolute;
+				left:-20px;
+				top:50%;
+				margin-top:-20px;
+			}
+			
 		</style>
 		<script src="http://localhost:4000/socket.io/socket.io.js"></script>
 		<script type="text/javascript" src="scripts/jquery.js"></script>
@@ -33,12 +84,16 @@
 	<body>
 		<div id="box">
 			<div id="joystick"></div>
+			<div class="arrow arrow-up" onmousedown="socket.emit('movement', { front:0.1 });"></div>
+			<div class="arrow arrow-down" onmousedown="socket.emit('movement', { back:0.1 });"></div>
+			<div class="arrow arrow-left" onmousedown="socket.emit('movement', { left:0.1 });"></div>
+			<div class="arrow arrow-right" onmousedown="socket.emit('movement', { right:0.1 });"></div>
 		</div>
 		<br/><br/>
 		<hr/>
 		<br/><br/>
-		<a href="javascript:socket.emit('takeoff', {});">takeoff</a><br/><br/>
-		<a href="javascript:socket.emit('land', {});">land</a><br/><br/>
-		<a href="javascript:socket.emit('recover', {});">recover from emergency mode</a>
+		<a href="#" onclick="socket.emit('takeoff', {});">takeoff</a><br/><br/>
+		<a href="#" onclick="socket.emit('land', {});">land</a><br/><br/>
+		<a href="#" onclick="socket.emit('recover', {});">recover from emergency mode</a>
 	</body>
 </html>

@@ -10,8 +10,10 @@ var pcmd = {};
 io.sockets.on('connection', function (socket) {
   socket.on('movement', function (data) {
     console.log('movement', data);
-		pcmd.front = data.front;
-		pcmd.left = data.side;
+		if(data.front) pcmd.front = data.front || 0;
+		if(data.back) pcmd.back = data.back || 0;
+		if(data.left) pcmd.left = data.left || 0;
+		if(data.right) pcmd.right =  data.right || 0;
   });
 
 	socket.on('takeoff', function (data) {
