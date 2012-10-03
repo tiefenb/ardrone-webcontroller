@@ -22,9 +22,9 @@ This is a browser based controller for the [Parrot AR Drone 2.0](http://ardrone2
 * turning clockwise / counter clockwise
 * moving up/down
 
-## Prototype Screenshoots
+## Prototype Screenshots
 
-![Prototype](https://raw.github.com/tiefenb/ardrone-webcontroller/master/screenshoot.jpg)
+![Prototype](https://raw.github.com/tiefenb/ardrone-webcontroller/master/screenshot.jpg)
 
 ## Warning: This project is in early development and experimental
 
