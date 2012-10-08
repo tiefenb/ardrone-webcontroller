@@ -12,12 +12,12 @@ $(document).ready(function() {
 			socket.emit('movement', movement);
 		},
 		stop: function(event, ui) {
-			socket.emit('movement', { front: 0, left: 0, back: 0, right: 0 });
+			socket.emit('movement', { front: 0, left: 0 });
 		}
 	});
 	
 	$('#box div.arrow').on('mouseup', function() {
-		socket.emit('movement', { front: 0, left: 0, back: 0, right: 0 });
+		socket.emit('movement', { front: 0, left: 0 });
 	});
 
 });
