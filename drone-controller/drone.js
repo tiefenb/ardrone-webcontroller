@@ -1,5 +1,5 @@
-//var arDrone = require('ar-drone');
-//var control = arDrone.createUdpControl();
+var arDrone = require('ar-drone');
+var control = arDrone.createUdpControl();
 var io = require('socket.io').listen(4000);
 
 var ref  = {
@@ -46,9 +46,9 @@ io.sockets.on('connection', function (socket) {
 });
 
 var sendControls = function() {
-	//control.ref(ref);
-  //control.pcmd(pcmd);
-  //control.flush();
+	control.ref(ref);
+ 	control.pcmd(pcmd);
+	control.flush();
 };
 
 console.log('now take off your drone!');
